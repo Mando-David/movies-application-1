@@ -8,7 +8,7 @@ module.exports = {
         const movie = {
             title: movieTitle,
             rating: movieRating
-        }
+        };
         const url = '/api/movies';
 
         const options = {
