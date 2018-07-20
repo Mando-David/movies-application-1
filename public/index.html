@@ -7,10 +7,20 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>Hello There!</h1>
-        <p>To get started, edit <code>src/index.js</code>.</p>
-    </div>
+    <form action="" onsubmit="event.preventDefault();"  method="post">
+
+        <label for="movieTitle">Movie Title:</label>
+        <input type="text" name="movieTitle" id="movieTitle" required>
+
+        <label for="movieRating">Movie Rating:</label>
+        <input type="number" min="1" max="5" name="movieRating" id="movieRating" required>
+
+
+        <button type="submit" id="movieSubmitBtn">Submit</button>
+
+    </form>
+
+
 
     <script src="/main.js"></script>
 </body>
