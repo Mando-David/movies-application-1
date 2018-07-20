@@ -14,7 +14,7 @@ function refresh() {
         movies.forEach(({ title, rating, id }) => {
 
             // inside this code, we want to add directly on top of the rows inside the body the title and the rating
-            tbody.insertAdjacentHTML("afterbegin", `<tr><td>${title}</td><td>${rating}</td></tr>`);
+            tbody.insertAdjacentHTML("afterbegin", `<tr><td>${title}</td><td>${rating}</td><td><button id="deleteBtn">Delete</button></td></tr>`);
             console.log(`id# ${id} - ${title} - rating: ${rating}`);
         });
     }).catch((error) => {
@@ -38,5 +38,6 @@ function submitNewMovie() {
 }
 
 document.getElementById('movieSubmitBtn').addEventListener('click', submitNewMovie, true);
+document.getElementById('deleteBtn').addEventListener('click', deleteMovie, true);
 
 refresh();
