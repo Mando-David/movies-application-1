@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="" onsubmit="event.preventDefault();"  method="post">
+    <form action="" onsubmit="event.preventDefault();" method="post">
 
         <label for="movieTitle">Movie Title:</label>
         <input type="text" name="movieTitle" id="movieTitle" required>
@@ -15,10 +15,20 @@
         <label for="movieRating">Movie Rating:</label>
         <input type="number" min="1" max="5" name="movieRating" id="movieRating" required>
 
-
         <button type="submit" id="movieSubmitBtn">Submit</button>
-
     </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="insert-movies"></tr>
+            </tbody>
+        </table>
 
 
 
