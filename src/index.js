@@ -3,13 +3,19 @@
  */
 import { getMovies, addMovie, deleteMovie, editMovie } from './api';
 
-
 getMovies().then((movies) => {
   // console.log('Here are all the movies:');
-  movies.forEach(({title, rating, id}) => {
 
+    // in this section, we assign the table body to the variable tbody
+    const tbody = document.getElementById('insert-movies');
+
+    // for each movie, make a new row of table data
+    movies.forEach(({ title, rating, id }) => {
+
+        // inside this code, we want to add directly on top of the rows inside the body the title and the rating
+        tbody.insertAdjacentHTML("beforebegin", `<tr><td>${title}</td><td>${rating}</td></tr>`);
     console.log(`id# ${id} - ${title} - rating: ${rating}`);
-  });
+    });
 }).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.');
   console.log(error);
