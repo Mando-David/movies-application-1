@@ -5,9 +5,11 @@ module.exports = {
     },
 
     addMovie: (movieTitle, movieRating) => {
+        const newTitle = document.getElementById('movieTitle').value;
+        const newRating = document.getElementById('movieRating').value;
         const movie = {
-            title: movieTitle,
-            rating: movieRating
+            title: newTitle,
+            rating: newRating
         };
         const url = '/api/movies';
 
@@ -19,7 +21,9 @@ module.exports = {
             body: JSON.stringify(movie),
         };
         fetch(url, options)
-            .then(/* post was created successfully */)
+            .then( () => {
+                console.log(`${newTitle} added to the movie list`);
+            })
             .catch(/* handle errors */);
     },
     // deleteMovie: () => {
