@@ -9,7 +9,7 @@ const tbody = document.getElementById('insert-movies');
 function refresh() {
     getMovies().then((movies) => {
         // console.log('Here are all the movies:');
-    
+
         // for each movie, make a new row of table data
         movies.forEach(({ title, rating, id }) => {
 
@@ -38,6 +38,6 @@ function submitNewMovie() {
 }
 
 document.getElementById('movieSubmitBtn').addEventListener('click', submitNewMovie, true);
-document.getElementById('deleteBtn').addEventListener('click', deleteMovie, true);
+// document.getElementById('deleteBtn').addEventListener('click', deleteMovie, true);
 
 refresh();

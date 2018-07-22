@@ -27,7 +27,7 @@ module.exports = {
             .catch(/* handle errors */);
     },
     deleteMovie: (movieTitle, movieRating) => {
-        const deletedMovie = documument.getElementById()
+        const deletedMovie = documument.getElementById();
         const url = '/api/movies';
 
         const options = {
